@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'rubik';
+    src: url('/assets/fonts/rubik-regular-webfont.woff2') format('woff2'),
+        url('/assets/fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'rubikmedium';
+    src: url('/assets/fonts/rubik-medium-webfont.woff2') format('woff2'),
+        url('/assets/fonts/rubik-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@mixin flexCenter($direction, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify; // Main Axis
+    align-items: $align; // Secondary Axis
+}
+@mixin neonText ($color:white) {
+    text-shadow:
+        -2px -2px 10px rgba(255, 255, 255, 0.623),
+        2px 2px 10px rgba(255, 255, 255, 0.623),
+        0 0 20px $color;
+}
+@mixin neonBorder {
+
+    color: #ffffff;
+    border: 2px solid rgb(154, 236, 255);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.6),
+        2px 1px 4px rgba(0, 0, 0, 0.3),
+        2px 4px 3px rgba(3, 0, 128, 0.3),
+        0 0 7px 2px rgba(0, 208, 255, 0.6),
+        inset 0 1px 2px rgba(0, 0, 0, 0.6),
+        inset 2px 1px 4px rgba(0, 0, 0, 0.3),
+        inset 2px 4px 3px rgba(3, 0, 128, 0.3),
+        inset 0 0 7px 2px rgba(0, 208, 255, 0.6);
+}
+
+$base: rgb(0, 18, 32);
+$baseTransparent: rgba(0, 18, 32, 0.877);
+$baseGradient: linear-gradient(to bottom right, rgba(0, 29, 51, 0.877), rgba(0, 22, 39, 0.877), rgba(0, 13, 22, 0.877));
+
+$accent: rgb(70, 174, 206);
+
+$ligth: rgb(16, 40, 59);
+$darkish: rgb(13, 27, 39);
+
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    a {
+        text-decoration: none;
+    }
+
+    font-family: rubik;
+}

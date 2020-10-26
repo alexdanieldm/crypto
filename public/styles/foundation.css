@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'rubik';
+  src: url("/assets/fonts/rubik-regular-webfont.woff2") format("woff2"), url("/assets/fonts/rubik-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rubikmedium';
+  src: url("/assets/fonts/rubik-medium-webfont.woff2") format("woff2"), url("/assets/fonts/rubik-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: rubik;
+}
+
+* a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=foundation.css.map */

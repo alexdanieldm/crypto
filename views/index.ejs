@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <!-- <%- include('partials/head'); %> -->
+    <title>Inicio de Sesion</title>
+    <!-- <link rel="stylesheet" href="/styles/forms.css"> -->
+</head>
+
+<body>
+    <main>
+        <div class="logo-banner">
+            <img src="assets/images/logo.png" alt="">
+        </div>
+
+        <section class="logIn">
+            <h1>Iniciar de Sesion</h1>
+    
+            <form class="logInForm" action="" method="POST">
+    
+                <label for="email">Correo Electronico</label>
+                <input class="input email" type="text" name="email"  autofocus required>
+    
+                <label for="Contraseña">Contraseña</label>
+                <input class="input password" type="password" name="password" required>
+    
+                <input class="button" type="submit" value="Iniciar Sesion">
+    
+                <p class="question">¿No tienes una cuenta? <a href="/register">Registrate aqui</a></p>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
