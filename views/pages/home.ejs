@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head'); %>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+    <%- include('../../partials/navigation'); %>
+
+    <main>
+        <h1>Inicio</h1>
+        <div id="ejs">
+            <%=message%>
+        </div>
+        <section class="ctaGrid">
+            <a href="/crypt.html" class="ctaCard">
+                <img src="../assets/icons/lock-closed.svg" alt="">
+                <h2>ENCRIPTAR</h2>
+            </a>
+
+            <a href="/upload.html" class="ctaCard">
+                <img src="../assets/icons/lock-open.svg" alt="">
+                <h2>DESENCRIPTAR</h2>
+            </a>
+        </section>
+    </main>
+
+    <%- include('../../partials/footer'); %>
+</body>
+</html>

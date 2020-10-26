@@ -33,3 +33,6 @@ app.use('', index);
 
 const register = require('./controllers/register');
 app.use('/register', register);
+
+const home = require('./controllers/home');
+app.use('/home', register);
