@@ -27,6 +27,9 @@ let server = app.listen(3000, () => {
     console.log('Up and Running at http://localhost:', server.address().port)
 });
 
-//* Assing controllers
-const logInRoute = require('./controllers/logIn');
-app.use('', logInRoute);
+//* Assign controllers
+const index = require('./controllers/logIn');
+app.use('', index);
+
+const register = require('./controllers/register');
+app.use('/register', register);

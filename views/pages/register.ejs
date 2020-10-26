@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="/styles/forms.css">
+</head>
+
+<body>
+    <main>
+        <div class="logo-banner">
+            <img src="/assets/images/logo.png" alt="">
+        </div>
+
+        <section class="register">
+            <h1>Crear una Nueva Cuenta</h1>
+
+            <form class="registerForm" action="" method="POST"> 
+                <div class="name">
+                    <label for="name">Nombre</label>
+                    <input class="input" type="text" name="name" autofocus required>
+                </div>
+    
+                <div class="lastName">
+                    <label for="lastName">Apellido</label>
+                    <input class="input" type="text" name="lastName" autofocus required>
+                </div>
+    
+                <div class="email">
+                    <label for="email">Correo Electronico</label>
+                    <input class="input" type="text" name="email" autofocus required>
+                </div>
+    
+                <div class="password">
+                    <label for="password">Contraseña</label>
+                    <input class="input" type="password" name="password" required>
+                </div>
+    
+                <div class="confirmPassword">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <input class="input" type="password" name="passwordConfimation" required>
+                </div>
+    
+                <input class="button" type="submit" value="Crear Cuenta">
+            </form>
+        </section>
+        
+    </main>
+</body>
+
+</html>

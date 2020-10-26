@@ -5,10 +5,10 @@ const jwt = require('jsonwebtoken');
 //* DB Models
 const User = require('../models/User');
 
-// //* Imports from validation.js
-// const {
-//     loginValidation
-// } = require('../validation')
+//* Imports from validation.js
+const {
+    logInValidation
+} = require('../handlers/validation')
 
 //* Render View
 router.get('', (req, res) => {
@@ -20,7 +20,7 @@ router.post('', async (req, res) => {
     //* Validate Data
     const {
         error
-    } = loginValidation(req.body);
+    } = logInValidation(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     //* Checking DB for Existing Data
@@ -44,6 +44,5 @@ router.post('', async (req, res) => {
 
     res.header("Authorization", token);
     res.redirect(`/user/home?authorization=${token}`);
-    debugger
 })
 module.exports = router;
