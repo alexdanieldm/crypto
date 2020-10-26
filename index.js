@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 dotenv.config();
 app.set('view engine', 'ejs');
 
-// Middleware
+//* Middleware
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -36,3 +36,9 @@ app.use('/register', register);
 
 const home = require('./controllers/home');
 app.use('/home', register);
+
+const home = require('./controllers/encrypt');
+app.use('/encrypt', register);
+
+const home = require('./controllers/decrypt');
+app.use('/decrypt', register);
