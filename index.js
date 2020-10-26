@@ -6,7 +6,14 @@ const mongoose = require('mongoose');
 dotenv.config();
 app.set('view engine', 'ejs');
 
-// Connect to DB
+// Middleware
+app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}))
+
+//* Connect to DB
 mongoose.connect(
     process.env.DB_URL, {
         useUnifiedTopology: true,
@@ -15,7 +22,11 @@ mongoose.connect(
     console.log('Connect to DB'),
 )
 
-//*Listen To PORT:3000
+//* Listen to PORT:3000
 let server = app.listen(3000, () => {
     console.log('Up and Running at http://localhost:', server.address().port)
 });
+
+//* Assing controllers
+const logInRoute = require('./controllers/logIn');
+app.use('', logInRoute);
