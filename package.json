@@ -1,0 +1,11 @@
+{
+  "name": "crypto-app",
+  "version": "1.0.0",
+  "description": "cryptography app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Duran",
+  "license": "ISC"
+}
