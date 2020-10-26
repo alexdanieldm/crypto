@@ -1,0 +1,48 @@
+@import 'foundation';
+
+.encryptForm {
+    @include flexCenter(column);
+    width: 50vw;
+    padding: 30px;
+    background-image: linear-gradient(to bottom right, $ligth, $darkish);
+
+    .encrypt-button {
+        margin-top: 20px;
+        padding: 10px 50px;
+    }
+
+    h3 {
+        @include neonText();
+        margin-bottom: 10px;
+    }
+}
+
+.filesCard {
+    @include neonBorder();
+    @include flexCenter(row);
+    height: 18%;
+    width: 70%;
+    margin-bottom: 50px;
+    
+    span {
+        color: rgba(255, 255, 255, 0.877);
+    }
+    img {
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    transition: all 0.20s;
+
+    &:hover {
+        background-color: $accent;
+        transform: translate(-3px, -3px);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+}
