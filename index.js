@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
 dotenv.config();
+app.set('view engine', 'ejs');
 
 // Connect to DB
 mongoose.connect(
