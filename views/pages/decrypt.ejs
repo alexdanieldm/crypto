@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head'); %>
+    <title>Encriptar</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/userForms.css">
+    <script async src="/scripts/dropbox.js" async></script>
+
+</head>
+
+<body>
+    <%- include('../../partials/navigation'); %>
+
+    <main>
+        <h1>Encriptar Archivo</h1>
+
+        <form class="encryptForm" action="">
+
+                <label class="filesCard info" for="uploadFile">
+                    <img src="/assets/icons/document-text-outline.svg" alt="">
+                    <h3 id='fileName'>Seleccione Archivo</h3>
+                    <span id="fileSize"></span>
+                </label>
+
+                <input class='hidden' id="uploadFile" type="file" name="userFiles" multiple>
+
+                <label class="filesCard info" for="uploadFile">
+                    <img src="/assets/icons/document-text-outline.svg" alt="">
+                    <h3 id='fileName'>Seleccione Archivo</h3>
+                    <span id="fileSize"></span>
+                </label>
+
+                <input class='hidden' id="uploadFile" type="file" name="userFiles" multiple>
+
+            <input class="button encrypt-button" type="submit" value="Encriptar">
+        </form>
+
+    </main>
+
+    <%- include('../../partials/footer'); %>
+</body>
+
+</html>
