@@ -2,16 +2,38 @@
 
 <head>
     <%- include('../partials/head'); %>
-    <title>Decencriptar</title>
+    <title>Generar Llaves</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/userForms.css">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
     <%- include('../partials/navigation'); %>
 
-    <main></main>
+    <main>
+        <h1>Generar Llaves Publicas y Privadas</h1>
 
-    <%- include('../partials/footer'); %>
+        <section class="form key">
+            <form class="form_grid key_form" action="" action="POST">
+
+                <div>
+                    <label for="email">Nombre de sus Llaves</label>
+                    <input class="input email" type="text" name="email"  autofocus required>
+                </div>
+
+                <p>
+                    <b>Llave Privada: PARA DESENCRIPTAR</b> estas NO deben ser compartidas con nadie, son unicamente para <b>USO PERSONAL</b> deberan ser guardadas en un lugar seguro
+                </p>
+
+                <p>
+                    <b>Llave Publica: PARA ENCRIPTAR</b> estas son para ser COMPARTIDAS, son para <b>USO COMPARTIDO</b>  ser enviadas a la persona con la que deseada intercambiar archivos
+                </p>
+
+                <input class="button form-button" type="submit" value="Generar Llavero">
+            </form>
+        </section>
+    </main>
 </body>
 
 </html>
