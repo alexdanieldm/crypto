@@ -52,6 +52,7 @@
     transition: all 0.20s;
 
     &:hover {
+        cursor: pointer;
         background-color: $accent;
         transform: translate(-3px, -3px);
     }

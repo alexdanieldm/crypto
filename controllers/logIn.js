@@ -39,10 +39,8 @@ router.post('', async (req, res) => {
     const token = jwt.sign({
         _id: user._id
     }, process.env.JWT_SECRET);
-    
-    // res.header('auth-token', token).status('302').redirect('/user/home');
 
-    res.header("Authorization", token);
+    res.header("authorization", token);
     res.redirect(`/home?authorization=${token}`);
 })
 module.exports = router;

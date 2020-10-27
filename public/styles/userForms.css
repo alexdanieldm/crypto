@@ -118,6 +118,7 @@
 }
 
 .filesCard:hover {
+  cursor: pointer;
   background-color: #46aece;
   -webkit-transform: translate(-3px, -3px);
           transform: translate(-3px, -3px);

@@ -31,11 +31,6 @@ body {
   -ms-grid-columns: 280px 1fr;
       grid-template-columns: 280px 1fr;
   background-color: black;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 29, 51, 0.877)), color-stop(rgba(0, 22, 39, 0.877)), to(rgba(0, 13, 22, 0.877))), url(/assets/images/code.png);
-  background-image: linear-gradient(to bottom right, rgba(0, 29, 51, 0.877), rgba(0, 22, 39, 0.877), rgba(0, 13, 22, 0.877)), url(/assets/images/code.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 nav {
@@ -119,7 +114,7 @@ nav li {
   font-family: rubik;
   font-size: 15px;
   margin-bottom: 20px;
-  padding: 10px 0px 10px 50px;
+  padding: 12px 0px 12px 50px;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -154,7 +149,13 @@ nav button {
 }
 
 main {
+  width: 100%;
   height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 29, 51, 0.877)), color-stop(rgba(0, 22, 39, 0.877)), to(rgba(0, 13, 22, 0.877))), url(/assets/images/code.png);
+  background-image: linear-gradient(to bottom right, rgba(0, 29, 51, 0.877), rgba(0, 22, 39, 0.877), rgba(0, 13, 22, 0.877)), url(/assets/images/code.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
