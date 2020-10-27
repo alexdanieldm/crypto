@@ -5,3 +5,5 @@ const verifyToken = require('../handlers/verifyToken');
 router.get('',(req, res) => {
     res.render('./pages/generate');
 });
+
+module.exports = router;

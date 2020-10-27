@@ -35,10 +35,13 @@ const register = require('./controllers/register');
 app.use('/register', register);
 
 const home = require('./controllers/home');
-app.use('/home', register);
+app.use('/home', home);
 
-const home = require('./controllers/encrypt');
-app.use('/encrypt', register);
+const encrypt = require('./controllers/encrypt');
+app.use('/encrypt', encrypt);
 
-const home = require('./controllers/decrypt');
-app.use('/decrypt', register);
+const decrypt = require('./controllers/decrypt');
+app.use('/decrypt', decrypt);
+
+const generate = require('./controllers/generate');
+app.use('/decrypt', generate);

@@ -43,6 +43,6 @@ router.post('', async (req, res) => {
     // res.header('auth-token', token).status('302').redirect('/user/home');
 
     res.header("Authorization", token);
-    res.redirect(`/user/home?authorization=${token}`);
+    res.redirect(`/home?authorization=${token}`);
 })
 module.exports = router;

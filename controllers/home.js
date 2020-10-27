@@ -5,3 +5,5 @@ const verifyToken = require('../handlers/verifyToken');
 router.get('',(req, res) => {
     res.render('./pages/home', {message: 'Alex!'});
 });
+
+module.exports = router;
