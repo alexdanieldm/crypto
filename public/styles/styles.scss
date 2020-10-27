@@ -45,7 +45,7 @@ nav {
     ul {
         width: 100%;
         list-style: none;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
 
         img {
             margin: 0px 10px 0px 0px;
@@ -58,9 +58,9 @@ nav {
         @include flexCenter(row, null);
         list-style: none;
         font-family: rubik;
-        font-size: 18px;
-        margin-bottom: 10px;
-        padding: 18px 0px 18px 50px;
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding: 10px 0px 10px 50px;
 
         transition: all 0.25s;
 

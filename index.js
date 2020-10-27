@@ -44,4 +44,4 @@ const decrypt = require('./controllers/decrypt');
 app.use('/decrypt', decrypt);
 
 const generate = require('./controllers/generate');
-app.use('/decrypt', generate);
+app.use('/generate', generate);
