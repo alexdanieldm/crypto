@@ -1,10 +1,14 @@
 import cryptography
+import sys 
+
+private_key = sys.argv[1]
+file = sys.argv[2]
 
 #* Reading Private Key
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 
-private_key_path = input("Enter your private key: ")
+private_key_path = private_key
 
 with open(private_key_path, "rb") as key_file:
         private_key = serialization.load_pem_private_key(
@@ -14,7 +18,7 @@ with open(private_key_path, "rb") as key_file:
         )
 
 #* Define file
-file_path = input("Enter your file: ")
+file_path = file
 f = open(file_path, 'rb')
 file_content = f.read()
 f.close()

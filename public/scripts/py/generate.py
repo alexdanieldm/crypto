@@ -1,4 +1,7 @@
 import cryptography
+import sys 
+
+key_name = sys.argv[1]
 
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import rsa
@@ -20,12 +23,12 @@ pem = private_key.private_bytes(
         format=serialization.PrivateFormat.PKCS8,
         encryption_algorithm=serialization.NoEncryption()
 )
-with open(desktop_path + 'private_key.pem', 'wb') as f:
+with open(desktop_path + key_name + '_private.pem', 'wb') as f:
     f.write(pem)
 
 pem = public_key.public_bytes(
         encoding=serialization.Encoding.PEM,
         format=serialization.PublicFormat.SubjectPublicKeyInfo
 )
-with open(desktop_path + 'public_key.pem', 'wb') as f:
+with open(desktop_path +  key_name + '_public.pem', 'wb') as f:
     f.write(pem)

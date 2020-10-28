@@ -8,17 +8,19 @@ router.get('',(req, res) => {
 });
 
 router.post ('', (req,res) => {
-    const {PythonShell} = require('python-shell');
+    const key_name = req.body.key_name;
     
     let pyshell = new PythonShell('./public/scripts/py/generate.py', {
         mode: 'binary',
-        args: []
+        args: [key_name]
     });
     
     pyshell.end(function (err) {
         if (err) throw err;
         console.log('Key Generated');
+        res.redirect('/encrypt');
     });
+
 })
 
 module.exports = router;

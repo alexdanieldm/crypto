@@ -13,13 +13,15 @@ router.post ('', (req,res) => {
     
     let pyshell = new PythonShell('./public/scripts/py/encrypt.py', {
         mode: 'binary',
-        args: []
+        args: [key, file]
     });
     
     pyshell.end(function (err) {
         if (err) throw err;
-        console.log('Key Generated');
+        console.log('File Encrypted');
+        res.redirect('/decrypt')
     });
+
 })
 
 module.exports = router;

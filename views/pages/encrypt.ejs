@@ -16,7 +16,7 @@
         <h1>Encriptar Archivo</h1>
 
         <section class="form">
-            <form class="form_grid" action="POST">
+            <form class="form_grid" action="" method="POST">
                 <div>
                     <h3>Selecione su Llave Publica</h3>
 
@@ -26,7 +26,7 @@
                         <span id="key_size"></span>
                     </label>
 
-                    <input class='hidden' id="key_file" type="file" name="key_file" multiple>
+                    <input class='hidden' id="key_file" type="file" name="key_file">
                 </div>
 
                 <div>
@@ -38,7 +38,7 @@
                         <span id="user_file_size"></span>
                     </label>
     
-                    <input class='hidden' id="user_file" type="file" name="user_file" multiple>
+                    <input class='hidden' id="user_file" type="file" name="user_file">
                 </div>
     
                 <input class="button form-button" type="submit" value="Encriptar">
