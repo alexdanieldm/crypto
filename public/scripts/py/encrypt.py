@@ -1,14 +1,12 @@
 import cryptography
 import sys 
 
-public_key = sys.argv[1]
-file = sys.argv[2]
+public_key_path = sys.argv[1]
+input_file_path = sys.argv[2]
 
 #* Reading Public Key
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
-
-public_key_path = public_key
 
 with open(public_key_path, "rb") as key_file:
     public_key = serialization.load_pem_public_key(
@@ -17,14 +15,13 @@ with open(public_key_path, "rb") as key_file:
     )
 
 #* Define file
-file_path = file
 f = open(file_path, 'rb')
-file_content = f.read()
+input_file_content = f.read()
 f.close()
 
 #* File parameters
 import os
-file_name, file_extension = os.path.splitext(file_path)
+file_path_without_extension, file_extension = os.path.splitext(input_file_path)
 
 #* Generate symmetric key
 from cryptography.fernet import Fernet
@@ -32,7 +29,7 @@ key = Fernet.generate_key()
 fernet_key = Fernet(key)
 
 #* Symmetric encrypt file
-encrypted_file = fernet_key.encrypt(file_content)
+encrypted_file = fernet_key.encrypt(input_file_content)
 
 #* Asymmetric encrypt Key
 from cryptography.hazmat.primitives import hashes
@@ -48,9 +45,13 @@ encrypted_key = public_key.encrypt(
 )
 
 #* Hybrid file
-file_and_key =encrypted_key + encrypted_file
+file_and_key = encrypted_key + encrypted_file
 
 #* Store Encrypted file
-f = open(file_name + '-Encrypted' + file_extension, 'wb')
+result_file_path = file_path_without_extension + '-encrypted' + file_extension
+f = open(result_file_path, 'wb')
 f.write(file_and_key)
 f.close()
+
+# Print the output file path
+print(result_file_path)
