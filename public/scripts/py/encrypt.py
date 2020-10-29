@@ -1,8 +1,10 @@
 import cryptography
 import sys 
 
+#* Extract data from the arguments sent by pyshell
 public_key_path = sys.argv[1]
 input_file_path = sys.argv[2]
+file_original_name = sys.argv[3]
 
 #* Reading Public Key
 from cryptography.hazmat.backends import default_backend
@@ -15,23 +17,23 @@ with open(public_key_path, "rb") as key_file:
     )
 
 #* Define file
-f = open(file_path, 'rb')
+f = open(input_file_path, 'rb')
 input_file_content = f.read()
 f.close()
 
-#* File parameters
+#* Split the file name and file extension
 import os
-file_path_without_extension, file_extension = os.path.splitext(input_file_path)
+name_without_extension, extension_without_name = os.path.splitext(file_original_name)
 
 #* Generate symmetric key
 from cryptography.fernet import Fernet
 key = Fernet.generate_key()
 fernet_key = Fernet(key)
 
-#* Symmetric encrypt file
+#* File content symmetric encryption
 encrypted_file = fernet_key.encrypt(input_file_content)
 
-#* Asymmetric encrypt Key
+#* Key asymmetric encryption
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
@@ -44,14 +46,15 @@ encrypted_key = public_key.encrypt(
     )
 )
 
-#* Hybrid file
+#* Make hybrid content
 file_and_key = encrypted_key + encrypted_file
 
-#* Store Encrypted file
-result_file_path = file_path_without_extension + '-encrypted' + file_extension
-f = open(result_file_path, 'wb')
+#* Calculate Desktop path
+username = os.getlogin()
+desktop_path = ('/Users/' + username + '/Desktop/')
+
+#* Store encrypted content on a New file
+final_path = desktop_path + name_without_extension + '-encrypted' + extension_without_name
+f = open(final_path, 'wb')
 f.write(file_and_key)
 f.close()
-
-# Print the output file path
-print(result_file_path)

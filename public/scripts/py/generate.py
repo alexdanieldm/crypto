@@ -12,6 +12,7 @@ private_key = rsa.generate_private_key(
 )
 public_key = private_key.public_key()
 
+#* Calculate Desktop path
 import os
 username = os.getlogin()
 desktop_path = ('/Users/' + username + '/Desktop/')
