@@ -5,6 +5,7 @@ import sys
 private_key_path = sys.argv[1]
 input_file_path = sys.argv[2]
 file_original_name = sys.argv[3]
+destination_path = sys.argv[4]
 
 #* Reading Private Key
 from cryptography.hazmat.backends import default_backend
@@ -55,7 +56,7 @@ username = os.getlogin()
 desktop_path = ('/Users/' + username + '/Desktop/')
 
 #* Store Decrypted file
-final_path = desktop_path + name_without_extension + '-decrypted' + file_extension
-f = open(final_path, 'wb')
+result_path = destination_path+ '/' + name_without_extension + '-decrypted' + file_extension
+f = open(result_path, 'wb')
 f.write(original_content)
 f.close()

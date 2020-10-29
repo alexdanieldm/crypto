@@ -5,7 +5,7 @@ Crypto it's a **cross-platform desktop application that let's you encrypt and de
 
 > "In a world where everyone is overexposed, the coolest thing you can do is maintain your mystery.”
 
-#### Requirements
+### Requirements
 
 You will need to have `cryptography` dependency in order for this to work properly
 
@@ -19,7 +19,7 @@ Finally,
 pip install cryptography
 ```
 
-#### Installation
+### Installation
 Firts you'll have to run 
 ```sh
 npm install

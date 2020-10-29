@@ -2,9 +2,9 @@
   "name": "crypto-app",
   "version": "1.0.0",
   "description": "cryptography app",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "electron ."
   },
   "author": "Alex Duran",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "python-shell": "^2.0.2"
   },
   "devDependencies": {
+    "electron": "^10.1.5",
     "nodemon": "^2.0.6"
   },
   "repository": {

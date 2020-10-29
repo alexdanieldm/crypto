@@ -1,13 +1,20 @@
 const router = require('express').Router();
 const verifyToken = require('../handlers/verifyToken');
 const {PythonShell} = require('python-shell');
+const { dialog } = require('electron');
 
 router.get('',(req, res) => {
     res.render('./pages/encrypt');
 });
 
 const multiparty = require('multiparty')
-router.post ('', (req,res) => {
+router.post ('', async (req,res) => {
+    var destination = await dialog.showOpenDialog({
+        properties: ['openDirectory']
+    });
+
+    destination_path = destination.filePaths[0]
+
     var form = new multiparty.Form({autoFiles: true});    
 
     form.parse(req, (err, fields, file) => {
@@ -22,7 +29,7 @@ router.post ('', (req,res) => {
 
         let pyshell = new PythonShell('./public/scripts/py/encrypt.py', {
             mode: 'binary',
-            args: [key_path, file_path, file_original_name]
+            args: [key_path, file_path, file_original_name, destination_path]
         });
         
         pyshell.stdout.on('data', function (data) {

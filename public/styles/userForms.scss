@@ -31,12 +31,11 @@
 
 .filesCard {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px 4fr;
     grid-template-rows: 1fr 1fr;
-    align-items: flex-end;
     
+    @include flexCenter(row);    
     @include neonBorder();
-    padding: 0px 80px;
     
     span {
         font-size: 13px;

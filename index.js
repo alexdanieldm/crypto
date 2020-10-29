@@ -45,3 +45,5 @@ app.use('/decrypt', decrypt);
 
 const generate = require('./controllers/generate');
 app.use('/generate', generate);
+
+module.exports = app;
