@@ -3,6 +3,8 @@
 # Crypto
 Crypto it's a **cross-platform desktop application that let's you encrypt and decrypt** files without size limitation using a custom system of private and public key using python
 
+> "In a world where everyone is overexposed, the coolest thing you can do is maintain your mystery.”
+
 #### Requirements
 
 You will need to have `cryptography` dependency in order for this to work properly
