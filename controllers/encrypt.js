@@ -15,17 +15,10 @@ router.post ('', (req,res) => {
         var key_parsed = file.key_file[0]
         var user_parsed = file.user_file[0]
 
-        console.log(key_parsed);
-        console.log(user_parsed);
-
         key_path = key_parsed.path;
         file_path = user_parsed.path;
 
-        console.log(key_path)
-        console.log(file_path)
-
         file_original_name = user_parsed.originalFilename;
-        console.log(file_original_name)
 
         let pyshell = new PythonShell('./public/scripts/py/encrypt.py', {
             mode: 'binary',
@@ -39,9 +32,8 @@ router.post ('', (req,res) => {
         pyshell.end(function (err) {
             if (err) throw err;
             console.log('File Encrypted');
-            res.redirect('/decrypt')
+            res.redirect('/encrypt')
         });
     })
 })
-
 module.exports = router;

@@ -23,7 +23,7 @@ f.close()
 
 #* Split the file name and file extension
 import os
-name_without_extension, extension_without_name = os.path.splitext(file_original_name)
+name_without_extension, file_extension = os.path.splitext(file_original_name)
 
 #* Generate symmetric key
 from cryptography.fernet import Fernet
@@ -54,7 +54,7 @@ username = os.getlogin()
 desktop_path = ('/Users/' + username + '/Desktop/')
 
 #* Store encrypted content on a New file
-final_path = desktop_path + name_without_extension + '-encrypted' + extension_without_name
+final_path = desktop_path + name_without_extension + '-encrypted' + file_extension
 f = open(final_path, 'wb')
 f.write(file_and_key)
 f.close()
