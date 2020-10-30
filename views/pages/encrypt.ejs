@@ -18,24 +18,28 @@
         <section class="form">
             <form class="form_grid" action="" method="POST" enctype="multipart/form-data">
                 <div>
-                    <h3>Selecione su Llave Publica</h3>
+                    <h3>Seleccione Llave Publica</h3>
 
-                    <label class="filesCard info" for="key_file">
-                        <img src="/assets/icons/key.svg" alt="">
-                        <h4 id='key_name'>Seleccione Archivo</h4>
-                        <span id="key_size"></span>
+                    <label class="filesCard" for="key_file">
+                        <div class="info">
+                            <img src="/assets/icons/key.svg" alt="">
+                            <h4 id='key_name'>Seleccione Archivo</h4>
+                            <span id="key_size"></span>
+                        </div>
                     </label>
 
                     <input class='hidden' id="key_file" type="file" name="key_file" accept=".pem">
                 </div>
 
                 <div>
-                    <h3>Selecione el Archivo para Encriptar</h3>
+                    <h3>Archivo para Encriptar</h3>
     
-                    <label class="filesCard info" for="user_file">
-                        <img src="/assets/icons/document-text-sharp.svg" alt="">
-                        <h4 id='user_file_name'>Seleccione Archivo</h4>
-                        <span id="user_file_size"></span>
+                    <label class="filesCard" for="user_file">
+                        <div class="info">
+                            <img src="/assets/icons/document-text-sharp.svg" alt="">
+                            <h4 id='user_file_name'>Seleccione Archivo</h4>
+                            <span id="user_file_size"></span>
+                        </div>
                     </label>
     
                     <input class='hidden' id="user_file" type="file" name="user_file">
