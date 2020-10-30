@@ -50,12 +50,8 @@ encrypted_key = public_key.encrypt(
 #* Make hybrid content
 file_and_key = encrypted_key + encrypted_file
 
-#* Calculate Desktop path
-username = os.getlogin()
-desktop_path = ('/Users/' + username + '/Desktop/')
-
 #* Store encrypted content on a New file
-result_path = destination_path+ '/' + name_without_extension + '-encrypted' + file_extension
+result_path = destination_path + '/' + name_without_extension + '-encrypted' + file_extension
 f = open(result_path, 'wb')
 f.write(file_and_key)
 f.close()
