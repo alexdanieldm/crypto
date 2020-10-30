@@ -9,30 +9,30 @@ Crypto it's a **cross-platform desktop application that let's you encrypt and de
 
 You will need to have install *`python >= 2.7.16`* and *`pip >= 19.1.1`* in order for this to work properly
 
-To check your python version run:
+To check your `python` version run:
 ```sh
 python --version
 ```
 
-And to install pip run:
+And to install `pip` run:
 ```sh
 sudo easy_install pip
 ```
 
 ### Installation
-Firts you'll have to run:
+Firts you'll have to run 
 ```sh
 npm install
-```
-
-After that run:
-```sh
-pip install -r requirements.txt
 ```
 
 And then have your environment variables on place by runnning:
 ```sh
 cp env.sample .env
+```
+
+After all that should be good to go, start the project by running
+```sh
+npm start
 ```
 
 #### Social Media
