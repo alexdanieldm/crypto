@@ -25,6 +25,12 @@ Firts you'll have to run
 npm install
 ```
 
+Then to install the python modules run:
+
+```sh
+pip install -r requirements.txt
+```
+
 And then have your environment variables on place by runnning:
 ```sh
 cp env.sample .env
