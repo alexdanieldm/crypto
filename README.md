@@ -20,17 +20,26 @@ sudo easy_install pip
 ```
 
 ### Installation
-Firts you'll have to run 
+Firts you'll have to run:
 ```sh
 npm install
+```
+
+Then to install the python modules run:
+
+```sh
+pip install -r requirements.txt
 ```
 
 And then have your environment variables on place by runnning:
 ```sh
 cp env.sample .env
 ```
+Here you'll need to fill the following values:
+* `DB_URL`: the connection to your [mongoDB Atlas](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&utm_campaign=gs_footprint_row_search_brand_atlas_desktop&utm_term=mongodb%20atlas&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=7326400240) cluster 
+* `JWT_SECRET`: an arbitrary value without spaces
 
-After all that should be good to go, start the project by running
+After all that you should be good to go, to start the project by running:
 ```sh
 npm start
 ```
