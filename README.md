@@ -7,22 +7,27 @@ Crypto it's a **cross-platform desktop application that let's you encrypt and de
 
 ### Requirements
 
-You will need to have `cryptography` dependency in order for this to work properly
+You will need to have install *`python >= 2.7.16`* and *`pip >= 19.1.1`* in order for this to work properly
 
-Make sure to install `python` and then `pip`
+To check your python version run:
+```sh
+python --version
+```
+
+And to install pip run:
 ```sh
 sudo easy_install pip
 ```
 
-Finally,
-```sh
-pip install cryptography
-```
-
 ### Installation
-Firts you'll have to run 
+Firts you'll have to run:
 ```sh
 npm install
+```
+
+After that run:
+```sh
+pip install -r requirements.txt
 ```
 
 And then have your environment variables on place by runnning:
@@ -30,5 +35,7 @@ And then have your environment variables on place by runnning:
 cp env.sample .env
 ```
 
-##### Social Media
-Twitter: [@alexdanieldm](https://twitter.com/alexdanieldm)
+#### Social Media
+_Twitter: [@alexdanieldm](https://twitter.com/alexdanieldm)_
+
+_Instagram: [@alexdanieldm](https://www.instagram.com/alexdanieldm/)_
