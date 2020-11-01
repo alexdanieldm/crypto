@@ -51,7 +51,7 @@ encrypted_key = public_key.encrypt(
 file_and_key = encrypted_key + encrypted_file
 
 #* Store encrypted content on a New file
-result_path = destination_path + '/' + name_without_extension + '-encrypted' + file_extension
+result_path = destination_path + '/' + name_without_extension + '-encriptado' + file_extension
 f = open(result_path, 'wb')
 f.write(file_and_key)
 f.close()

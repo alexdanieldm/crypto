@@ -71,10 +71,10 @@
 
 .key_form {
     width: 80%;
-    grid-gap: 0px;
+    grid-gap: 20px;
 
     label {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     input {
@@ -93,7 +93,7 @@
     }
 
     .key_name_input {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .email {
@@ -103,7 +103,7 @@
     p {
         width: 80%;
         margin: 0px auto 0px auto;
-        font-size: 13px;
+        font-size: 15px;
     }
 
     b {
@@ -112,7 +112,7 @@
 
     .form-button {
         @include neonBorder();
-        margin: 70px 30px 0px 30px;
+        margin: 40px 30px 0px 30px;
         padding: 10px 0px;
     }
 }

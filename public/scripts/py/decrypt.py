@@ -56,7 +56,7 @@ username = os.getlogin()
 desktop_path = ('/Users/' + username + '/Desktop/')
 
 #* Store Decrypted file
-result_path = destination_path+ '/' + name_without_extension + '-decrypted' + file_extension
+result_path = destination_path+ '/' + name_without_extension + '-desencriptado' + file_extension
 f = open(result_path, 'wb')
 f.write(original_content)
 f.close()
