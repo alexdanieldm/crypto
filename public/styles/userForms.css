@@ -148,11 +148,11 @@
 
 .key_form {
   width: 80%;
-  grid-gap: 0px;
+  grid-gap: 20px;
 }
 
 .key_form label {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .key_form input {
@@ -173,7 +173,7 @@
 }
 
 .key_form .key_name_input {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .key_form .email {
@@ -183,7 +183,7 @@
 .key_form p {
   width: 80%;
   margin: 0px auto 0px auto;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .key_form b {
@@ -195,7 +195,7 @@
   border: 2px solid #9aecff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 2px 1px 4px rgba(0, 0, 0, 0.3), 2px 4px 3px rgba(3, 0, 128, 0.3), 0 0 7px 2px rgba(0, 208, 255, 0.6), inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 2px 1px 4px rgba(0, 0, 0, 0.3), inset 2px 4px 3px rgba(3, 0, 128, 0.3), inset 0 0 7px 2px rgba(0, 208, 255, 0.6);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 2px 1px 4px rgba(0, 0, 0, 0.3), 2px 4px 3px rgba(3, 0, 128, 0.3), 0 0 7px 2px rgba(0, 208, 255, 0.6), inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 2px 1px 4px rgba(0, 0, 0, 0.3), inset 2px 4px 3px rgba(3, 0, 128, 0.3), inset 0 0 7px 2px rgba(0, 208, 255, 0.6);
-  margin: 70px 30px 0px 30px;
+  margin: 40px 30px 0px 30px;
   padding: 10px 0px;
 }
 
