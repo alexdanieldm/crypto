@@ -1,7 +1,7 @@
 {
-  "name": "crypto-app",
+  "name": "crypto",
   "version": "1.0.0",
-  "description": "cryptography app",
+  "description": "Cross-Platform desktop application for encrypting and decrypting files",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "electron": "^10.1.5",
+    "electron-packager": "^15.1.0",
     "nodemon": "^2.0.6"
   },
   "repository": {
