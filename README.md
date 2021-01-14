@@ -43,8 +43,3 @@ After all that you should be good to go, to start the project by running:
 ```sh
 npm start
 ```
-
-#### Social Media
-_Twitter: [@alexdanieldm](https://twitter.com/alexdanieldm)_
-
-_Instagram: [@alexdanieldm](https://www.instagram.com/alexdanieldm/)_
